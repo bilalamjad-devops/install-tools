@@ -12,7 +12,7 @@ sudo apt install docker.io
 
 or 
 
-Install using the apt repository
+<a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">Install using the apt repository</a>
 
 1. Set up Docker's apt repository
 
