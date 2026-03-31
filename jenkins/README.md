@@ -23,7 +23,12 @@ sudo apt update
 sudo apt install jenkins
 ```
 
-password:
+Access Jenkins:
+
+```bash
+PublicIP:8080
+```
+Password:
 
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
