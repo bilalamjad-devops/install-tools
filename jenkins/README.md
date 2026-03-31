@@ -22,3 +22,9 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
 sudo apt update
 sudo apt install jenkins
 ```
+
+password:
+
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
