@@ -34,7 +34,7 @@ sudo apt install conntrack
 Start Minikube:
 
 ```bash
- minikube start --vm-driver=none
+minikube start --vm-driver=none
 minikube status
 ```
 
