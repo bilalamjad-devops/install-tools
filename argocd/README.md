@@ -15,6 +15,9 @@ If you want to use a specific port (like your 31894), it is better to use **Node
 ```bash
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
 ```
+```argocd
+kubectl get svc argocd-server -n argocd
+```
 
 ### **Step 3: Get the Admin Password**
 ```bash
