@@ -1,5 +1,28 @@
 
 
+
+### **3. ArgoCD Installation**
+
+```bash
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+# Change service to NodePort
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
+
+# Get ArgoCD URL
+kubectl get svc argocd-server -n argocd
+
+# Get Admin Password
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+```
+
+Login at `http://YOUR_SERVER_IP:NODEPORT` (default username: `admin`)
+
+---
+
+---
+
 ## 1. Installing ArgoCD (Manifest Way)
 
 If you are using a Cloud Provider (like AWS) that supports LoadBalancers, your `patch` command is correct. If you are on a local VM or a simple EC2, you might need to use `NodePort`.
